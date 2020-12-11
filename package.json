@@ -32,8 +32,11 @@
   },
   "husky": {
     "hooks": {
-      "pre-commit": "npm run format && npm run lint -- --fix && git add -A ."
+      "pre-commit": "lint-staged"
     }
+  },
+  "lint-staged": {
+    "*": "prettier --write && npm run lint -- --fix"
   },
   "browserslist": {
     "production": [
