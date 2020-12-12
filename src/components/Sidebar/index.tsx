@@ -1,19 +1,16 @@
-// @ts-nocheck
-
-import React from 'react';
+import { FC } from 'react';
 import DesktopSidebar from './DesktopSidebar';
 import SidebarOverlay from './SidebarOverlay';
+import { SidebarProps } from './types';
 
-function Sidebar({ isSidebarOpen, handleIsSidebarOpen }) {
-  return (
-    <>
-      <SidebarOverlay
-        isSidebarOpen={isSidebarOpen}
-        handleIsSidebarOpen={handleIsSidebarOpen}
-      />
-      <DesktopSidebar isSidebarOpen={isSidebarOpen} />
-    </>
-  );
-}
+const Sidebar: FC<SidebarProps> = ({ isSidebarOpen, handleIsSidebarOpen }) => (
+  <>
+    <SidebarOverlay
+      isSidebarOpen={isSidebarOpen}
+      handleIsSidebarOpen={handleIsSidebarOpen}
+    />
+    <DesktopSidebar isSidebarOpen={isSidebarOpen} />
+  </>
+);
 
 export default Sidebar;

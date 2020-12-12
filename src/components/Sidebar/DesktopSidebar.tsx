@@ -1,9 +1,8 @@
-// @ts-nocheck
-import React from 'react';
-
+import { FC } from 'react';
+import { DesktopSidebarProps } from './types';
 import SidebarContent from './SidebarContent';
 
-const DesktopSidebar = ({ isSidebarOpen }) => (
+const DesktopSidebar: FC<DesktopSidebarProps> = ({ isSidebarOpen }) => (
   <aside
     className={`lg:flex block lg:relative fixed inset-y-0 left-0 z-30 w-64 overflow-y-auto 
 	transition duration-300 ease-out transform translate-x-0  
