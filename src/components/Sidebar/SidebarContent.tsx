@@ -1,9 +1,8 @@
 import { FC } from 'react';
 import { NavLink, Route } from 'react-router-dom';
 import routes from '../../routes/sidebar';
-import { SidebarContentProps } from './types';
 
-const SidebarContent: FC<SidebarContentProps> = () => (
+const SidebarContent: FC = () => (
   <div className="py-4 text-gray-500 dark:text-gray-400">
     <a
       className="ml-6 text-lg font-bold text-gray-800 dark:text-gray-200"
